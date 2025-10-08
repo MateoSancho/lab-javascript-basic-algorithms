@@ -54,3 +54,24 @@ if (numName < numName2) {
         console.log("What?! You both have the same name?")
     }
 
+//Bonus
+let longText = "Lorem et Ipsum is simly dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+let numberWords = 1;
+let etCount = 0;
+
+if (longText === "") {
+    numberWords = 0
+} else if (!longText.includes(" ") && !longText === "") {
+    numberWords = 1
+}
+
+for (let i = 0; i < longText.length; i++) {
+    if (longText[i] === " ") {
+        numberWords += 1
+    } else if (longText[i] === "e" && longText[i + 1] === "t" && longText[i - 1] === " " && longText[i + 2] === " ") {
+        etCount += 1
+    }
+}
+
+console.log(numberWords)
+console.log(etCount)
